@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Miavaka</title>
+  <meta name="theme-color" content="#0f172a">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <nav>
+    <div class="nav-content">
+      <div class="brand"><i class="fas fa-crown"></i> Tsena Online MG</div>
+      <div class="lang-switch">
+        <i class="fas fa-globe"></i>
+        <span>fr</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <i class="fas fa-microphone"></i>
+        <input type="text" class="search-bar" placeholder="Rechercher des articles...">
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="categories-container">
+      <div class="categories-wrapper">
+        <div class="category-list">
+          <div class="category-item active">Tous</div>
+          <div class="category-item">Vêtements</div>
+          <div class="category-item">Informatique</div>
+          <div class="category-item">Accessoires pour véhicules</div>
+          <div class="category-item">Décoration maison</div>
+          <div class="category-item">Beauté & Santé</div>
+        </div>
+      </div>
+      <div class="category-arrow-box">
+        <i class="fas fa-chevron-down category-arrow"></i>
+      </div>
+    </div>
+
+    <div class="recent-section" id="recentSection" style="display: none;">
+      <div class="recent-header">
+        <h3 class="recent-title">Récemment vus</h3>
+        <div class="recent-more">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="recent-wrapper" id="recentList">
+        </div>
+    </div>
+
+    <div class="grid">
+      
+      <div class="product-card" onclick="addToRecent('Efface-rayures premium', '25,000ar', 'anti-rayure.png')">
+        <div class="media-box">
+          <img src="anti-rayure.png" alt="Manivelle de vitre" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Efface-rayures premium pour voiture : cire de ...</h2>
+          <div class="p-price">25,000ar</div>
+        </div>
+      </div>
+      
+      <div class="product-card" onclick="addToRecent('Manivelle de vitre premium', '20,000ar', 'manivelle_de_vitre.png')">
+        <div class="media-box">
+          <img src="manivelle_de_vitre.png" alt="Manivelle de vitre" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Manivelle de lève-vitre, régulateur de lève-vitre ...</h2>
+          <div class="p-price">20,000ar</div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="addToRecent('Housse volant élastique', '15,000ar', 'housse_volant.png')">
+        <div class="media-box">
+          <img src="housse_volant.png" alt="Housse Volant Élastique" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Housse de volant style sport respirante ...</h2>
+          <div class="p-price">15,000ar</div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="addToRecent('Miroir Angle Mort (La Paire)', '20,000ar', 'spot_mirror.png')">
+        <div class="media-box">
+          <img src="spot_mirror.png" alt="Miroir Angle Mort" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Blind spot mirror : petit rétroviseur rond et convexe</h2>
+          <div class="p-price">20,000ar</div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="addToRecent('Support Téléphone Crochet', '15,000ar', 'support_telephone.png')">
+        <div class="media-box">
+          <img src="support_telephone.png" alt="Support Téléphone" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Support de téléphone pour voiture : fixation sur grille ...</h2>
+          <div class="p-price">15,000ar</div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="addToRecent('Cache Serrure (Lot de 4)', '20,000ar', 'cache_serrur.png')">
+        <div class="media-box">
+          <img src="cache_serrur.png" alt="Cache Serrure" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Protection universelle en silicone pour boucle de ...</h2>
+          <div class="p-price">20,000ar</div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="addToRecent('Anti Bruit Silicone', '20,000ar', 'anti_bruit.png')">
+        <div class="media-box">
+          <img src="anti_bruit.png" alt="Amortisseur de Bruit" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Tampons amortisseurs autocollants pour ...</h2>
+          <div class="p-price">20,000ar</div>
+        </div>
+      </div>
+      
+      <div class="product-card" onclick="addToRecent('Cire de réparation rayures', '20,000ar', 'crystal.png')">
+        <div class="media-box">
+          <img src="crystal.png" alt="Amortisseur de Bruit" class="img-file">
+        </div>
+        <div class="p-info">
+          <h2 class="p-title">Cire de réparation de rayures de peinture et ...</h2>
+          <div class="p-price">20,000ar</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="chat-toggle" id="chatToggle"><i class="fas fa-comments"></i></div>
+
+  <div class="bottom-nav">
+    <a href="#" class="nav-item active">
+      <i class="fas fa-home"></i>
+      <span>Accueil</span>
+    </a>
+    <a href="#" class="nav-item">
+      <i class="fas fa-list-alt"></i>
+      <span>Commandes</span>
+    </a>
+    <a href="#" class="nav-item">
+      <i class="fas fa-envelope"></i>
+      <span>Messages</span>
+    </a>
+    <a href="#" class="nav-item">
+      <i class="fas fa-shopping-cart"></i>
+      <span>Panier</span>
+    </a>
+    <a href="#" class="nav-item">
+      <i class="fas fa-user"></i>
+      <span>Mon</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
